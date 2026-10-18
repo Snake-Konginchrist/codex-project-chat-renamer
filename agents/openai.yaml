@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目对话重命名"
+  short_description: "按范围和阅读深度整理项目对话，自选命名规则，支持统计、预览和直接改名"
+  default_prompt: "使用 $codex-project-chat-renamer 整理我选择的一个或多个项目的对话，让我选择项目、处理范围、命名风格和预览或直接执行，未指定的其余选项按默认。"
