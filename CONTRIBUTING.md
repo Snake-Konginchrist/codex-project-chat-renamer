@@ -1,21 +1,23 @@
-# Contributing / 贡献指南
+# Contributing
 
-欢迎改进命名体验、项目选择、历史覆盖检查和数据库兼容性。
+[简体中文](CONTRIBUTING.zh-CN.md)
 
-## 本地开发
+Contributions to naming options, project selection, history coverage checks, and database compatibility are welcome.
 
-1. Fork 并克隆仓库，创建工作分支。
-2. 修改 skill 规则时同步检查 `agents/openai.yaml` 与中英文 README。
-3. 修改脚本时添加能够说明行为的测试，使用临时合成数据。
-4. 运行 `python3 -m unittest discover -s tests -v`。
-5. 提交 PR，说明问题、变化及验证范围。
+## Development
 
-请保持项目由用户选择、预览不写入、数据库只读、应用 API 修改标题等约束。摘要阅读不能声称已通读全文；缺少应用工具时不能声称实际改名成功。
+1. Fork and clone the repository, then create a working branch.
+2. Keep `SKILL.md`, `agents/openai.yaml`, and both READMEs consistent when changing skill behavior.
+3. Add meaningful tests for script changes using synthetic temporary databases.
+4. Run `python3 -m unittest discover -s tests -v`.
+5. Open a pull request describing the problem, changes, and validation scope.
 
-Issue 中请提供预期行为、实际结果、Python 版本及脱敏后的最小复现。不要上传真实聊天历史、数据库、访问令牌或个人路径。数据库兼容问题优先提供字段名称及合成样例。
+Keep English documentation in unsuffixed files and Simplified Chinese translations in `.zh-CN.md` files.
 
-## English
+Preserve user-selected projects, preview-only behavior, read-only database access, and application-based title writes. Summary-based reading must not be presented as full-history reading. Never claim successful renaming without the necessary application tools and verification.
 
-Fork the repository, create a branch, and describe the problem and validation in your PR. Keep both READMEs and skill metadata consistent. Use synthetic temporary databases for tests and run `python3 -m unittest discover -s tests -v`.
+## Reporting issues
 
-Preserve explicit project selection, preview-only behavior, read-only database access, and application-based title writes. Never submit real chat histories, databases, tokens, or private paths in issues or test fixtures.
+Include expected behavior, actual results, your Python version, and a minimal redacted reproduction. For database compatibility issues, prefer field names and synthetic examples.
+
+Do not upload real chat histories, databases, access tokens, or private paths in issues or test fixtures.
